@@ -4,17 +4,17 @@ const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 
 search.addEventListener('click', () => {
-    const  APIKey = '8b2c195f885ca6cc8390a4c6dd5c4b91';
+    const APIKey = '8b2c195f885ca6cc8390a4c6dd5c4b91';
     const city = document.querySelector('.search-box input').value;
 
     if (city == '') 
         return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid={APIKey}`).then(response => response.json()).then(json => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then(json => {
 
 
         const image = document.querySelector('.weather-box img');
-        const temperature = document.querySelector('.weather-box .temperature');
+        const temperature = document.querySelector('.weather-box .termperature');
         const description = document.querySelector('.weather-box .description');
         const humidity = document.querySelector('.weather-details .humidity span');
         const wind = document.querySelector('.weather-details .wind span');
@@ -29,16 +29,23 @@ search.addEventListener('click', () => {
             case 'Snow':
                 image.src = 'snow.png';
                 break;
-                case 'Snow':
-                    image.src = 'snow.png';
-                    break;
+            case 'Clouds':
+                image.src = 'cloud.png';
+                break;
+            case 'Mist':
+                image.src ='mist.png';
+                break; 
+            case 'Haze':
+                image.src ='mist.png';
+                break;
 
-
+            default:
+                image.src = 'cloud.png';
             break;
 
-            default: 
-                break;
+        
                     }
     }
+    )});
 
-)́
+
