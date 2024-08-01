@@ -30,10 +30,6 @@ WeatherApp is a user-friendly application designed to provide real-time weather 
 
 [![OpenWeather](https://img.shields.io/badge/OpenWeather-API-blue)](https://openweathermap.org/)
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
 
-For any questions or feedback, please contact us at [your-email@example.com](mailto:your-email@example.com).
